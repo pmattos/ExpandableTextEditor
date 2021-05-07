@@ -5,7 +5,7 @@
 
 import SwiftUI
 
-/// The top-level view.
+/// The top-level view with 2 text views.
 struct ContentView: View {
     @State private var firstText: String = "First Text\n"
     @State private var secondText: String = "Second Text\n"
@@ -34,13 +34,15 @@ struct TextExpanderSettingsView: View {
     var body: some View {
         Form {
             Section(header: Text("Text Expander")) {
-                Button("Sync Snippets (\(textExpanderStatus.snippetsCount))") {
+                Button("Sync Snippetsx") {
                     ExpandableTextView.syncSnippets()
                 }
                 Button("Clear Snippets") {
                     ExpandableTextView.clearSnippets()
                 }
+
                 Toggle("Snippets Fill-in Support", isOn: $textExpanderStatus.fillInEnabled)
+             
                 Button("Open TextExpander") {
                     openTextExpanderApp()
                 }
@@ -52,6 +54,7 @@ struct TextExpanderSettingsView: View {
         if let appURL = URL(string: "textexpander://") {
             UIApplication.shared.open(appURL)
         }
+        // Remove focus from text view, if any.
         UIResponder.firstResponder?.resignFirstResponder()
     }
     
@@ -61,6 +64,8 @@ struct TextExpanderSettingsView: View {
         UITableView.appearance().backgroundColor = .clear
     }
 }
+
+// MARK: - Simple UI Preview
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

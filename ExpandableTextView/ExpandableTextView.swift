@@ -12,7 +12,7 @@ import TextExpander
 ///
 /// The following TextExpander SDK features are supported:
 /// * Simple snippets expansion
-/// * Fill-in for complex snippets
+/// * Fill-in for complex snippets (done externally in the TextExpander app)
 struct ExpandableTextView: UIViewRepresentable {
     @Binding private var text: String
     @Environment(\.font) private var font: Font?
@@ -123,8 +123,8 @@ extension ExpandableTextView {
     static func handleOpenURL(_ url: URL) -> Bool {
         // To differentiate from other URL calls the app might receives,
         // we need to examine the URL for the presence of "x-callback-url" in the URL host
-        // and "/TextExpander" as the prefix of the URL path to determine whether or not
-        // a given URL is a TextExpander snippet data callback to your URL scheme.
+        // and proper app scheme to determine whether or not a given URL is a TextExpander
+        // snippet data callback to your URL scheme.
         guard url.scheme == ExpandableTextViewApp.appURLScheme,
               url.host == "x-callback-url"
         else {
@@ -182,7 +182,7 @@ fileprivate extension URL {
 extension UIFont {
     
     /// Converts from `Font` to `UIFont`.
-    /// Please note this does *not* support custom sizes, weights, etc.
+    /// Please note this does *not* yet support custom sizes, weights, etc.
     class func preferredFont(for font: Font?) -> UIFont {
         guard let font = font else {
             os_log(.error, "Unexpected nit font")
@@ -218,5 +218,3 @@ extension UIFont {
         }
     }
 }
-
-

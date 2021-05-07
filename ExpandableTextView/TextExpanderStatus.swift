@@ -6,10 +6,10 @@
 import TextExpander
 import os.log
 
-/// Tracks TextExpander general status.
+/// Model tracking TextExpander general status.
 final class TextExpanderStatus: ObservableObject {
-    @Published fileprivate(set) var expansionEnabled: Bool = false
-    @Published fileprivate(set) var snippetsCount: UInt = 0
+    @Published var expansionEnabled: Bool = false
+    @Published var snippetsCount: UInt = 0
     @Published var fillInEnabled: Bool = true
     
     static let shared = TextExpanderStatus()
@@ -19,8 +19,11 @@ final class TextExpanderStatus: ObservableObject {
     }
     
     func update() {
+        expansionEnabled = SMTEDelegateController.expansionEnabled()
+        
+        // TODO: Add support for snippets count, etc.
+        /*
         DispatchQueue.global(qos: .userInitiated).async {
-            let expansionEnabled = SMTEDelegateController.expansionEnabled()
             var snippetsCount: UInt = 0
             do {
                 try SMTEDelegateController
@@ -30,9 +33,9 @@ final class TextExpanderStatus: ObservableObject {
                        error.localizedDescription)
             }
             DispatchQueue.main.async {
-                self.expansionEnabled = expansionEnabled
                 self.snippetsCount = snippetsCount
             }
         }
+        */
     }
 }
