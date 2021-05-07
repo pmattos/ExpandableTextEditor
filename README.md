@@ -11,13 +11,13 @@ This view wraps a `UITextView`, providing all expected multi-line text editing c
 
 Finally, the sample app shows two `ExpandableTextEditor` working side by side plus some global settings, as demonstrated by the video below:
 
-https://user-images.githubusercontent.com/3756628/117390736-18098700-aec5-11eb-9c27-9013f36a9f85.mp4
+https://user-images.githubusercontent.com/3756628/117472602-7408f580-af2f-11eb-90fb-75faf4737b45.mp4
 
 ## Future Ideas
 
 In the future, we could extend this in the following ways
 
-* Expose this as a proper Swift Package framework around the aforementioned `ExpandableTextEditor`.
+* Expose this as a proper Swift Package framework around the aforementioned reusable `ExpandableTextView`.
 * Support for [rich text editing][Rich Text] (i.e., attributed strings, etc).
 * Improve the `ExpandableTextEditor` API, providing per view settings such as: turning off snippets expansion; turning off fill-in support; etc.
 
