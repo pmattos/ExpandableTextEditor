@@ -22,7 +22,7 @@ struct TextEditingView: View {
 
 The [`ExpandableTextView`][ExpandableTextView] view wraps a [`UITextView`][UITextView], providing all expected multi-line text editing capabilities. The `UITextView` delegate is implemented by an internal, per view [`SMTEDelegateController`][SMTEDelegateController] instance. The global TextExpander settings are controlled by the [`TextExpanderStatus`][TextExpanderStatus] singleton.
 
-Finally, the sample app shows two `ExpandableTextEditor` working side by side plus some global settings, as demonstrated by the video below:
+Finally, the sample app shows two [`ExpandableTextView`][ExpandableTextView] working side by side plus some global settings, as demonstrated by the video below:
 
 https://user-images.githubusercontent.com/3756628/117474459-4cb32800-af31-11eb-942e-723da3b86bd7.mp4
 
