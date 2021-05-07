@@ -11,7 +11,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            ExpandableTextEditor(text: $text)
+            ExpandableTextView(text: $text)
                 .font(.title2)
                 .padding(10)
                 .border(Color.primary, width: 0.5)
@@ -23,16 +23,16 @@ struct ContentView: View {
 }
 
 struct TextExpanderSettingsView: View {
-    @ObservedObject private var textExpanderStatus = ExpandableTextEditor.textExpanderStatus
+    @ObservedObject private var textExpanderStatus = ExpandableTextView.textExpanderStatus
 
     var body: some View {
         Form {
             Section(header: Text("Text Expander")) {
                 Button("Sync Snippets (\(textExpanderStatus.snippetsCount))") {
-                    ExpandableTextEditor.syncSnippets()
+                    ExpandableTextView.syncSnippets()
                 }
                 Button("Clear Snippets") {
-                    ExpandableTextEditor.clearSnippets()
+                    ExpandableTextView.clearSnippets()
                 }
                 Toggle("Snippets Fill-in Enabled", isOn: $textExpanderStatus.fillInEnabled)
             }

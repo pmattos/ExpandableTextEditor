@@ -13,7 +13,7 @@ import TextExpander
 /// The following TextExpander SDK features are supported:
 /// * Simple snippets expansion
 /// * Fill-in for complex snippets
-struct ExpandableTextEditor: UIViewRepresentable {
+struct ExpandableTextView: UIViewRepresentable {
     @Binding private var text: String
     @Environment(\.font) private var font: Font?
     
@@ -72,7 +72,7 @@ struct ExpandableTextEditor: UIViewRepresentable {
         }
         
         func identifier(forTextArea uiTextObject: Any!) -> String! {
-            guard ExpandableTextEditor.textExpanderStatus.fillInEnabled else {
+            guard ExpandableTextView.textExpanderStatus.fillInEnabled else {
                 return nil
             }
             return identifier.description
@@ -83,7 +83,7 @@ struct ExpandableTextEditor: UIViewRepresentable {
             fillWasCanceled userCanceledFill: Bool,
             cursorPosition ioInsertionPointLocation: UnsafeMutablePointer<Int>!
         ) -> Any! {
-            guard ExpandableTextEditor.textExpanderStatus.fillInEnabled,
+            guard ExpandableTextView.textExpanderStatus.fillInEnabled,
                   let textView = textView
             else {
                 return nil
@@ -101,7 +101,7 @@ struct ExpandableTextEditor: UIViewRepresentable {
 
 // MARK: - TextExpander Integration
 
-extension ExpandableTextEditor {
+extension ExpandableTextView {
     private static let sharedTextExpander = SMTEDelegateController()
     private static var knownCoordinators: [UUID: CoordinatorRef] = [:]
 
@@ -181,7 +181,7 @@ fileprivate extension URL {
 
 // MARK: - TextExpander Settings
 
-extension ExpandableTextEditor {
+extension ExpandableTextView {
     static let textExpanderStatus = TextExpanderStatus()
 
     /// Tracks TextExpander general status.

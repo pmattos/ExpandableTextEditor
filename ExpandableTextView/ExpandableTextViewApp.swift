@@ -17,7 +17,7 @@ struct ExpandableTextViewApp: App {
             ContentView()
                 .onOpenURL { url in
                     print("onOpenURL:", url)
-                    ExpandableTextEditor.handleOpenURL(url)
+                    ExpandableTextView.handleOpenURL(url)
                 }
         }
     }

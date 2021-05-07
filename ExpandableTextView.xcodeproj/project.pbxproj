@@ -13,7 +13,7 @@
 		AEDC49BC264051590036FDA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDC49BB264051590036FDA7 /* ContentView.swift */; };
 		AEDC49BE2640515A0036FDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEDC49BD2640515A0036FDA7 /* Assets.xcassets */; };
 		AEDC49C12640515A0036FDA7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEDC49C02640515A0036FDA7 /* Preview Assets.xcassets */; };
-		AEDC49CB264059850036FDA7 /* ExpandableTextEditor.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDC49CA264059850036FDA7 /* ExpandableTextEditor.swift */; };
+		AEDC49CB264059850036FDA7 /* ExpandableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDC49CA264059850036FDA7 /* ExpandableTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,7 +38,7 @@
 		AEDC49BD2640515A0036FDA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AEDC49C02640515A0036FDA7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		AEDC49C22640515A0036FDA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AEDC49CA264059850036FDA7 /* ExpandableTextEditor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextEditor.swift; sourceTree = "<group>"; };
+		AEDC49CA264059850036FDA7 /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +75,7 @@
 			children = (
 				AEDC49B9264051590036FDA7 /* ExpandableTextViewApp.swift */,
 				AEDC49BB264051590036FDA7 /* ContentView.swift */,
-				AEDC49CA264059850036FDA7 /* ExpandableTextEditor.swift */,
+				AEDC49CA264059850036FDA7 /* ExpandableTextView.swift */,
 				AEDC49C22640515A0036FDA7 /* Info.plist */,
 				AEDC49BD2640515A0036FDA7 /* Assets.xcassets */,
 				AEDC49BF2640515A0036FDA7 /* Preview Content */,
@@ -162,7 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AEDC49BC264051590036FDA7 /* ContentView.swift in Sources */,
-				AEDC49CB264059850036FDA7 /* ExpandableTextEditor.swift in Sources */,
+				AEDC49CB264059850036FDA7 /* ExpandableTextView.swift in Sources */,
 				AEDC49BA264051590036FDA7 /* ExpandableTextViewApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
