@@ -12,7 +12,7 @@ The [`ExpandableTextView`][ExpandableTextView] view wraps a `UITextView`, provid
 
 Finally, the sample app shows two `ExpandableTextEditor` working side by side plus some global settings, as demonstrated by the video below:
 
-https://user-images.githubusercontent.com/3756628/117472602-7408f580-af2f-11eb-90fb-75faf4737b45.mp4
+https://user-images.githubusercontent.com/3756628/117474459-4cb32800-af31-11eb-942e-723da3b86bd7.mp4
 
 ## Future Ideas
 
