@@ -8,7 +8,7 @@ The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableT
 * fill-in support for complex snippets (done externally by the TextExpander app)
 * simple snippets library management (e.g., synchronization, clearing, etc)
 
-The [`ExpandableTextView`][ExpandableTextView] view wraps a `UITextView`, providing all expected multi-line text editing capabilities. The `UITextView` delegate is implemented by an internal, per view `SMTEDelegateController` instance. The global TextExpander settings are controlled by the [`TextExpanderStatus`][TextExpanderStatus] singleton.
+The [`ExpandableTextView`][ExpandableTextView] view wraps a [`UITextView`][UITextView], providing all expected multi-line text editing capabilities. The `UITextView` delegate is implemented by an internal, per view `SMTEDelegateController` instance. The global TextExpander settings are controlled by the [`TextExpanderStatus`][TextExpanderStatus] singleton.
 
 Finally, the sample app shows two `ExpandableTextEditor` working side by side plus some global settings, as demonstrated by the video below:
 
@@ -27,4 +27,5 @@ In the future, we could extend this in the following ways:
 [ExpandableTextView]: https://github.com/pmattos/ExpandableTextEditor/blob/main/ExpandableTextView/ExpandableTextView.swift
 [TextExpanderStatus]: https://github.com/pmattos/ExpandableTextEditor/blob/main/ExpandableTextView/TextExpanderStatus.swift
 [Rich Text]: https://github.com/SmileSoftware/TextExpanderTouchSDK/blob/master/README.md#handling-attributed-text
+[UITextView]: https://developer.apple.com/documentation/uikit/uitextview
 
