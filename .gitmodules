@@ -1,0 +1,3 @@
+[submodule "TextExpanderTouchSDK"]
+	path = TextExpanderTouchSDK
+	url = https://github.com/SmileSoftware/TextExpanderTouchSDK

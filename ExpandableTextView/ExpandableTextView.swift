@@ -72,7 +72,7 @@ struct ExpandableTextView: UIViewRepresentable {
         }
         
         func identifier(forTextArea uiTextObject: Any!) -> String! {
-            guard ExpandableTextView.textExpanderStatus.fillInEnabled else {
+            guard TextExpanderStatus.shared.fillInEnabled else {
                 return nil
             }
             return identifier.description
@@ -83,9 +83,7 @@ struct ExpandableTextView: UIViewRepresentable {
             fillWasCanceled userCanceledFill: Bool,
             cursorPosition ioInsertionPointLocation: UnsafeMutablePointer<Int>!
         ) -> Any! {
-            guard ExpandableTextView.textExpanderStatus.fillInEnabled,
-                  let textView = textView
-            else {
+            guard TextExpanderStatus.shared.fillInEnabled, let textView = textView else {
                 return nil
             }
             
@@ -156,7 +154,7 @@ extension ExpandableTextView {
             os_log(.error, "handleGetSnippetsURL FAILED: %@", error)
         } else {
             os_log(.info, "handleGetSnippetsURL SUCCEEDED")
-            textExpanderStatus.update()
+            TextExpanderStatus.shared.update()
         }
         return urlWasValid
     }
@@ -164,7 +162,7 @@ extension ExpandableTextView {
     /// Clears fetched snippets, if any.
     static func clearSnippets() {
         SMTEDelegateController.clearSharedSnippets()
-        textExpanderStatus.update()
+        TextExpanderStatus.shared.update()
     }
 }
 
@@ -179,69 +177,12 @@ fileprivate extension URL {
     }
 }
 
-// MARK: - TextExpander Settings
-
-extension ExpandableTextView {
-    static let textExpanderStatus = TextExpanderStatus()
-
-    /// Tracks TextExpander general status.
-    final class TextExpanderStatus: ObservableObject {
-        @Published fileprivate(set) var expansionEnabled: Bool = false
-        @Published fileprivate(set) var snippetsCount: UInt = 0
-        @Published var fillInEnabled: Bool = true
-
-        fileprivate init() {
-            update()
-        }
-        
-        fileprivate func update() {
-            DispatchQueue.global(qos: .userInitiated).async {
-                let expansionEnabled = SMTEDelegateController.expansionEnabled()
-                var snippetsCount: UInt = 0
-                do {
-                    try SMTEDelegateController
-                        .expansionStatusForceLoad(true, snippetCount: &snippetsCount, load: nil)
-                } catch {
-                    os_log(.error, "expansionStatusForceLoad FAILED: %@",
-                           error.localizedDescription)
-                }
-                DispatchQueue.main.async {
-                    self.expansionEnabled = expansionEnabled
-                    self.snippetsCount = snippetsCount
-                }
-            }
-        }
-    }
-}
-
-
-
-/*
- 
- final class FakeViewDelegate: NSObject, UITextViewDelegate {
-     func textViewDidChange(_ textView: UITextView) {
-         print("FakeViewDelegate...")
-     }
- }
-
-
-
-final class TextView: UITextView {
-    
-    override var text: String! {
-        didSet {
-            print("DID SET")
-        }
-    }
-}
-*/
-
 // MARK: - Helpers
 
 extension UIFont {
     
     /// Converts from `Font` to `UIFont`.
-    /// This still does *not* support custom sizes, weights, etc.
+    /// Please note this does *not* support custom sizes, weights, etc.
     class func preferredFont(for font: Font?) -> UIFont {
         guard let font = font else {
             os_log(.error, "Unexpected nit font")

@@ -23,7 +23,7 @@ struct ContentView: View {
 }
 
 struct TextExpanderSettingsView: View {
-    @ObservedObject private var textExpanderStatus = ExpandableTextView.textExpanderStatus
+    @ObservedObject private var textExpanderStatus = TextExpanderStatus.shared
 
     var body: some View {
         Form {
@@ -34,7 +34,7 @@ struct TextExpanderSettingsView: View {
                 Button("Clear Snippets") {
                     ExpandableTextView.clearSnippets()
                 }
-                Toggle("Snippets Fill-in Enabled", isOn: $textExpanderStatus.fillInEnabled)
+                Toggle("Snippets Fill-in Support", isOn: $textExpanderStatus.fillInEnabled)
             }
         }
     }
