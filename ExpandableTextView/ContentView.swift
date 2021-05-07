@@ -34,7 +34,7 @@ struct TextExpanderSettingsView: View {
     var body: some View {
         Form {
             Section(header: Text("Text Expander")) {
-                Button("Sync Snippetsx") {
+                Button("Sync Snippets") {
                     ExpandableTextView.syncSnippets()
                 }
                 Button("Clear Snippets") {
