@@ -6,8 +6,9 @@ The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableT
 
 * inline snippets expansion
 * fill-in support for complex snippets (done externally by the TextExpander app)
+* simple snippets library management (e.g., synchronization, clearing, etc)
 
-This view wraps a `UITextView`, providing all expected multi-line text editing capabilities. The `UITextView` delegate is implemented by an internal, per view `SMTEDelegateController` instance. The global TextExpander settings are controlled by the [`TextExpanderStatus`][TextExpanderStatus] singleton.
+The [`ExpandableTextView`][ExpandableTextView] view wraps a `UITextView`, providing all expected multi-line text editing capabilities. The `UITextView` delegate is implemented by an internal, per view `SMTEDelegateController` instance. The global TextExpander settings are controlled by the [`TextExpanderStatus`][TextExpanderStatus] singleton.
 
 Finally, the sample app shows two `ExpandableTextEditor` working side by side plus some global settings, as demonstrated by the video below:
 
@@ -17,12 +18,13 @@ https://user-images.githubusercontent.com/3756628/117472602-7408f580-af2f-11eb-9
 
 In the future, we could extend this in the following ways
 
-* Expose this as a proper Swift Package framework around the aforementioned reusable `ExpandableTextView`.
 * Support for [rich text editing][Rich Text] (i.e., attributed strings, etc).
+* Expose this as a proper Swift Package framework around the aforementioned reusable `ExpandableTextView`.
 * Improve the `ExpandableTextEditor` API, providing per view settings such as: turning off snippets expansion; turning off fill-in support; etc.
-
+* Provide more information about the number of available snippets, last synchronization date, etc.
 
 [TextExpander]: https://github.com/SmileSoftware/TextExpanderTouchSDK/blob/master/README.md
 [ExpandableTextView]: https://github.com/pmattos/ExpandableTextEditor/blob/main/ExpandableTextView/ExpandableTextView.swift
 [TextExpanderStatus]: https://github.com/pmattos/ExpandableTextEditor/blob/main/ExpandableTextView/TextExpanderStatus.swift
 [Rich Text]: https://github.com/SmileSoftware/TextExpanderTouchSDK/blob/master/README.md#handling-attributed-text
+
