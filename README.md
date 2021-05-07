@@ -8,7 +8,7 @@ The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableT
 * fill-in support for complex snippets (done externally by the TextExpander app)
 * simple snippets library management (e.g., synchronization, clearing, etc)
 
-The [`ExpandableTextView`][ExpandableTextView] works just like any other SwiftUI view that binds to a `String` value (e.g., [`TextField`][TextField], [`TextEditor`][TextEditor], etc), for instance:
+The [`ExpandableTextView`][ExpandableTextView] works just like any other SwiftUI view that *binds* to a `String` value (e.g., [`TextField`][TextField], [`TextEditor`][TextEditor], etc), for instance:
 
 ```swift
 struct TextEditingView: View {
