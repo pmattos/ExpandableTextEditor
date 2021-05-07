@@ -1,4 +1,4 @@
-# ExpandableTextEditor
+# ExpandableTextView
 
 This project provides a sample SwiftUI based integration for [TextExpander SDK][TextExpander].
 
