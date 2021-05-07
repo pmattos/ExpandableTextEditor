@@ -20,7 +20,7 @@ In the future, we could extend this in the following ways:
 
 * Support for [rich text editing][Rich Text] (i.e., attributed strings, etc).
 * Expose this as a proper Swift Package framework around the aforementioned reusable `ExpandableTextView`.
-* Improve the `ExpandableTextView` API, providing per view settings such as: turning off snippets expansion; turning off fill-in support; etc.
+* Improve the `ExpandableTextView` API, providing *per* view settings such as: turning off snippets expansion; turning off fill-in support; etc.
 * Provide more information about the number of available snippets, last synchronization date, etc.
 
 [TextExpander]: https://github.com/SmileSoftware/TextExpanderTouchSDK/blob/master/README.md
