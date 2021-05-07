@@ -8,7 +8,7 @@ The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableT
 
 This view wraps a `UITextView`, providing all expected multi-line text editing capabilities. The `UITextView` delegate is implemented by an internal, per view `SMTEDelegateController` instance. The global TextExpander settings are controlled by the [`TextExpanderStatus`][TextExpanderStatus] singleton.
 
-Finally, The sample app shows two `ExpandableTextEditor` working side by side plus some global settings, as demonstrated by the video below:
+Finally, the sample app shows two `ExpandableTextEditor` working side by side plus some global settings, as demonstrated by the video below:
 
 https://user-images.githubusercontent.com/3756628/117390736-18098700-aec5-11eb-9c27-9013f36a9f85.mp4
 
