@@ -2,7 +2,7 @@
 
 This project provides a sample SwiftUI based integration for the [TextExpander SDK][TextExpander].
 
-The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableTextView] SwiftUI view. This provides a simple, reusable, (almost) self-contained component to quickly support the TextExpander SDK in any SwiftUI based app. This supports the following TextExpander features:
+The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableTextView] SwiftUI view. This provides a simple, reusable, (almost) self-contained component to quickly support the TextExpander SDK in any SwiftUI based app. This includes supports for the following TextExpander features:
 
 * inline snippets expansion
 * fill-in support for complex snippets (done externally by the TextExpander app)
