@@ -3,7 +3,8 @@
 This project provides a sample SwiftUI based integration for the [TextExpander SDK][TextExpander].
 
 The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableTextView] SwiftUI view. This provides a simple, reusable, (almost) self-contained component to quickly support the TextExpander SDK in any SwiftUI based app. This supports the following TextExpander features:
-* snippets inline expansion
+
+* inline snippets expansion
 * fill-in support for complex snippets (done externally by the TextExpander app)
 
 This view wraps a `UITextView`, providing all expected multi-line text editing capabilities. The `UITextView` delegate is implemented by an internal, per view `SMTEDelegateController` instance. The global TextExpander settings are controlled by the [`TextExpanderStatus`][TextExpanderStatus] singleton.
