@@ -20,4 +20,4 @@ In the future, we could extend this in the following ways:
 
 
 [TextExpander]: https://github.com/SmileSoftware/TextExpanderTouchSDK/blob/master/README.md
-[ExpandableTextView]: https://github.com/pmattos/ExpandableTextEditor/blob/main/ExpandableTextView/ExpandableTextEditor.swift
+[ExpandableTextView]: https://github.com/pmattos/ExpandableTextEditor/blob/main/ExpandableTextView/ExpandableTextView.swift
