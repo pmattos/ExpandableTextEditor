@@ -10,6 +10,8 @@ This view wraps a `UITextView`, providing all expected multi-line text editing c
 
 Finally, The sample app shows two `ExpandableTextEditor` working side by side plus some global settings, as demonstrated by the video below:
 
+![Demo](https://github.com/pmattos/ExpandableTextView/blob/main/Demo.gif)
+
 ## Future Ideas
 
 In the future, we could extend this in the following ways:
