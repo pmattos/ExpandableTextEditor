@@ -8,7 +8,7 @@ The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableT
 * fill-in support for complex snippets (done externally by the TextExpander app)
 * simple snippets library management (e.g., synchronization, clearing, etc)
 
-The [`ExpandableTextView`][ExpandableTextView] works just like any other SwiftUI view that binds to a `String` value (e.g., `TextField`, `TextEditor`, etc), for instance:
+The [`ExpandableTextView`][ExpandableTextView] works just like any other SwiftUI view that binds to a `String` value (e.g., [`TextField`][TextField], [`TextEditor`][TextEditor], etc), for instance:
 
 ```swift
 struct TextEditingView: View {
@@ -38,7 +38,12 @@ In the future, we could extend this in the following ways:
 [TextExpander]: https://github.com/SmileSoftware/TextExpanderTouchSDK/blob/master/README.md
 [ExpandableTextView]: https://github.com/pmattos/ExpandableTextEditor/blob/main/ExpandableTextView/ExpandableTextView.swift
 [TextExpanderStatus]: https://github.com/pmattos/ExpandableTextEditor/blob/main/ExpandableTextView/TextExpanderStatus.swift
+
 [Rich Text]: https://github.com/SmileSoftware/TextExpanderTouchSDK/blob/master/README.md#handling-attributed-text
-[UITextView]: https://developer.apple.com/documentation/uikit/uitextview
 [SMTEDelegateController]: https://github.com/SmileSoftware/TextExpanderTouchSDK/blob/master/TextExpander.xcframework/ios-arm64/TextExpander.framework/Headers/SMTEDelegateController.h
+
+[UITextView]: https://developer.apple.com/documentation/uikit/uitextview
+[TextEditor]: https://developer.apple.com/documentation/swiftui/texteditor
+[TextField]: https://developer.apple.com/documentation/swiftui/textfield
+
 
