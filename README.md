@@ -8,6 +8,18 @@ The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableT
 * fill-in support for complex snippets (done externally by the TextExpander app)
 * simple snippets library management (e.g., synchronization, clearing, etc)
 
+The [`ExpandableTextView`][ExpandableTextView] works just like any other SwiftUI view that binds to a `String` value (e.g., `TextField`, `TextEditor`, etc), for instance:
+
+```swift
+struct TextEditingView: View {
+    @State private var text: String = "Hello World"
+
+    var body: some View {
+        ExpandableTextView(text: $text)
+    }
+}
+```
+
 The [`ExpandableTextView`][ExpandableTextView] view wraps a [`UITextView`][UITextView], providing all expected multi-line text editing capabilities. The `UITextView` delegate is implemented by an internal, per view [`SMTEDelegateController`][SMTEDelegateController] instance. The global TextExpander settings are controlled by the [`TextExpanderStatus`][TextExpanderStatus] singleton.
 
 Finally, the sample app shows two `ExpandableTextEditor` working side by side plus some global settings, as demonstrated by the video below:
