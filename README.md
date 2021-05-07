@@ -2,7 +2,7 @@
 
 This project provides a sample SwiftUI based integration for [TextExpander SDK][TextExpander].
 
-The SDK integration is provided by the custom [`ExpandableTextEditor`][ExpandableTextView] SwiftUI view. This provides a reusable, (almost) self-contained component to quickly support the TextExpander SDK in any SwiftUI based app.
+The SDK integration is provided by the custom [`ExpandableTextView`][ExpandableTextView] SwiftUI view. This provides a reusable, (almost) self-contained component to quickly support the TextExpander SDK in any SwiftUI based app.
 
 This view wraps a `UITextView`, providing all expected multi-line text editing capabilities.  
 
