@@ -3,11 +3,13 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		AEC564232644CA78000B22B1 /* TextExpanderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC564222644CA78000B22B1 /* TextExpanderStatus.swift */; };
+		AEC564262644D6F2000B22B1 /* TextExpander.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC564242644D6B6000B22B1 /* TextExpander.xcframework */; };
+		AEC564272644D6F2000B22B1 /* TextExpander.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEC564242644D6B6000B22B1 /* TextExpander.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		AEDC49BA264051590036FDA7 /* ExpandableTextViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDC49B9264051590036FDA7 /* ExpandableTextViewApp.swift */; };
 		AEDC49BC264051590036FDA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDC49BB264051590036FDA7 /* ContentView.swift */; };
 		AEDC49BE2640515A0036FDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEDC49BD2640515A0036FDA7 /* Assets.xcassets */; };
@@ -22,6 +24,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				AEC564272644D6F2000B22B1 /* TextExpander.xcframework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -30,6 +33,7 @@
 
 /* Begin PBXFileReference section */
 		AEC564222644CA78000B22B1 /* TextExpanderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExpanderStatus.swift; sourceTree = "<group>"; };
+		AEC564242644D6B6000B22B1 /* TextExpander.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TextExpander.xcframework; path = TextExpanderTouchSDK/TextExpander.xcframework; sourceTree = "<group>"; };
 		AEDC49B6264051590036FDA7 /* ExpandableTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpandableTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDC49B9264051590036FDA7 /* ExpandableTextViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextViewApp.swift; sourceTree = "<group>"; };
 		AEDC49BB264051590036FDA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -44,6 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEC564262644D6F2000B22B1 /* TextExpander.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -53,6 +58,7 @@
 		AEDC49AD264051590036FDA7 = {
 			isa = PBXGroup;
 			children = (
+				AEC564242644D6B6000B22B1 /* TextExpander.xcframework */,
 				AEDC49B8264051590036FDA7 /* ExpandableTextView */,
 				AEDC49B7264051590036FDA7 /* Products */,
 			);

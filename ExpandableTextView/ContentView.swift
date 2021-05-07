@@ -7,13 +7,19 @@ import SwiftUI
 
 /// The top-level view.
 struct ContentView: View {
-    @State private var text: String = "Hello world!\n"
-    
+    @State private var firstText: String = "First Text\n"
+    @State private var secondText: String = "Second Text\n"
+
     var body: some View {
         VStack {
-            ExpandableTextView(text: $text)
+            ExpandableTextView(text: $firstText)
                 .font(.title2)
-                .padding(10)
+                .padding(.horizontal, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
+                .border(Color.primary, width: 0.5)
+                .padding()
+            ExpandableTextView(text: $secondText)
+                .font(.title2)
+                .padding(.horizontal, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .border(Color.primary, width: 0.5)
                 .padding()
             Spacer()
@@ -35,7 +41,16 @@ struct TextExpanderSettingsView: View {
                     ExpandableTextView.clearSnippets()
                 }
                 Toggle("Snippets Fill-in Support", isOn: $textExpanderStatus.fillInEnabled)
+                Button("Open TextExpander") {
+                    openTextExpanderApp()
+                }
             }
+        }
+    }
+    
+    private func openTextExpanderApp() {
+        if let appURL = URL(string: "textexpander://") {
+            UIApplication.shared.open(appURL)
         }
     }
     
