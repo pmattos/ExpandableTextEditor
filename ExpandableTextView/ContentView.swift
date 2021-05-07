@@ -13,12 +13,12 @@ struct ContentView: View {
     var body: some View {
         VStack {
             ExpandableTextView(text: $firstText)
-                .font(.title2)
+                .font(.title3)
                 .padding(.horizontal, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .border(Color.primary, width: 0.5)
                 .padding()
             ExpandableTextView(text: $secondText)
-                .font(.title2)
+                .font(.title3)
                 .padding(.horizontal, /*@START_MENU_TOKEN@*/10/*@END_MENU_TOKEN@*/)
                 .border(Color.primary, width: 0.5)
                 .padding()
@@ -52,6 +52,7 @@ struct TextExpanderSettingsView: View {
         if let appURL = URL(string: "textexpander://") {
             UIApplication.shared.open(appURL)
         }
+        UIResponder.firstResponder?.resignFirstResponder()
     }
     
     init() {

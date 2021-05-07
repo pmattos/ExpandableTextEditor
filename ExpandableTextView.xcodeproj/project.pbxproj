@@ -10,6 +10,8 @@
 		AEC564232644CA78000B22B1 /* TextExpanderStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC564222644CA78000B22B1 /* TextExpanderStatus.swift */; };
 		AEC564262644D6F2000B22B1 /* TextExpander.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = AEC564242644D6B6000B22B1 /* TextExpander.xcframework */; };
 		AEC564272644D6F2000B22B1 /* TextExpander.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = AEC564242644D6B6000B22B1 /* TextExpander.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		AEC564292644E7EA000B22B1 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEC564282644E7EA000B22B1 /* Helpers.swift */; };
+		AEC5642D26458F84000B22B1 /* SwiftWorkarounds.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC5642C26458F84000B22B1 /* SwiftWorkarounds.m */; };
 		AEDC49BA264051590036FDA7 /* ExpandableTextViewApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDC49B9264051590036FDA7 /* ExpandableTextViewApp.swift */; };
 		AEDC49BC264051590036FDA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEDC49BB264051590036FDA7 /* ContentView.swift */; };
 		AEDC49BE2640515A0036FDA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AEDC49BD2640515A0036FDA7 /* Assets.xcassets */; };
@@ -34,6 +36,10 @@
 /* Begin PBXFileReference section */
 		AEC564222644CA78000B22B1 /* TextExpanderStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExpanderStatus.swift; sourceTree = "<group>"; };
 		AEC564242644D6B6000B22B1 /* TextExpander.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = TextExpander.xcframework; path = TextExpanderTouchSDK/TextExpander.xcframework; sourceTree = "<group>"; };
+		AEC564282644E7EA000B22B1 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		AEC5642A26458F83000B22B1 /* ExpandableTextView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ExpandableTextView-Bridging-Header.h"; sourceTree = "<group>"; };
+		AEC5642B26458F84000B22B1 /* SwiftWorkarounds.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SwiftWorkarounds.h; sourceTree = "<group>"; };
+		AEC5642C26458F84000B22B1 /* SwiftWorkarounds.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SwiftWorkarounds.m; sourceTree = "<group>"; };
 		AEDC49B6264051590036FDA7 /* ExpandableTextView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ExpandableTextView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AEDC49B9264051590036FDA7 /* ExpandableTextViewApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextViewApp.swift; sourceTree = "<group>"; };
 		AEDC49BB264051590036FDA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -79,6 +85,10 @@
 				AEDC49BB264051590036FDA7 /* ContentView.swift */,
 				AEDC49CA264059850036FDA7 /* ExpandableTextView.swift */,
 				AEC564222644CA78000B22B1 /* TextExpanderStatus.swift */,
+				AEC564282644E7EA000B22B1 /* Helpers.swift */,
+				AEC5642C26458F84000B22B1 /* SwiftWorkarounds.m */,
+				AEC5642B26458F84000B22B1 /* SwiftWorkarounds.h */,
+				AEC5642A26458F83000B22B1 /* ExpandableTextView-Bridging-Header.h */,
 				AEDC49C22640515A0036FDA7 /* Info.plist */,
 				AEDC49BD2640515A0036FDA7 /* Assets.xcassets */,
 				AEDC49BF2640515A0036FDA7 /* Preview Content */,
@@ -126,6 +136,7 @@
 				TargetAttributes = {
 					AEDC49B5264051590036FDA7 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -167,6 +178,8 @@
 				AEDC49BC264051590036FDA7 /* ContentView.swift in Sources */,
 				AEDC49CB264059850036FDA7 /* ExpandableTextView.swift in Sources */,
 				AEDC49BA264051590036FDA7 /* ExpandableTextViewApp.swift in Sources */,
+				AEC5642D26458F84000B22B1 /* SwiftWorkarounds.m in Sources */,
+				AEC564292644E7EA000B22B1 /* Helpers.swift in Sources */,
 				AEC564232644CA78000B22B1 /* TextExpanderStatus.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -295,6 +308,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpandableTextView/Preview Content\"";
 				DEVELOPMENT_TEAM = L983F69L7E;
@@ -307,6 +321,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = smile.ExpandableTextView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpandableTextView/ExpandableTextView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -317,6 +333,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"ExpandableTextView/Preview Content\"";
 				DEVELOPMENT_TEAM = L983F69L7E;
@@ -329,6 +346,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = smile.ExpandableTextView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "ExpandableTextView/ExpandableTextView-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
